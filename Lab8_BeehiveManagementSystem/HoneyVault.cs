@@ -9,7 +9,7 @@ namespace Lab8_BeehiveManagementSystem
 		public const float NECTAR_CONVERSION_RATIO = .19f;
 		public const float LOW_LEVEL_WARNING = 10f;
 
-		static void ConvertNectarToHoney(float amount)
+		public static void ConvertNectarToHoney(float amount)
 		{
 			if (amount > nectar)
 			{
@@ -20,7 +20,7 @@ namespace Lab8_BeehiveManagementSystem
 			nectar -= amount;
 		}
 
-		static bool ConsumeHoney(float amount)
+		public static bool ConsumeHoney(float amount)
 		{
 			if (honey >= amount)
 			{
@@ -30,7 +30,7 @@ namespace Lab8_BeehiveManagementSystem
 			return false;
 		}
 
-		static void CollectNectar (float amount)
+		public static void CollectNectar (float amount)
 		{
 			if (amount > 0f)
 			{
