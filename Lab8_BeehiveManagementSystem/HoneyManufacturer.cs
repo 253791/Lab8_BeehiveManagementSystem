@@ -1,6 +1,6 @@
 ﻿namespace Lab8_BeehiveManagementSystem
 {
-	internal class HoneyManufacturer : Bee
+	class HoneyManufacturer : Bee
 	{
 		public const float NECTAR_PROCESSED_PER_SHIFT = 33.15f;
 		public override float CostPerShift { get { return 1.7f; } }

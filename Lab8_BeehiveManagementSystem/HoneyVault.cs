@@ -4,21 +4,22 @@ namespace Lab8_BeehiveManagementSystem
 {
 	static class HoneyVault
 	{
-		private static float honey = 25f;
-		private static float nectar = 100f;
-		public const float NECTAR_CONVERSION_RATIO = .19f;
-		public const float LOW_LEVEL_WARNING = 10f;
+        public const float NECTAR_CONVERSION_RATIO = .19f;
+        public const float LOW_LEVEL_WARNING = 10f;
+        private static float honey = 25f;
+        private static float nectar = 100f;
 
-		public static void ConvertNectarToHoney(float amount)
+        public static void ConvertNectarToHoney(float amount)
 		{
-			if (amount > nectar)
+            float nectarToConvert = amount;
+			if (nectarToConvert > nectar)
 			{
-				honey += nectar * NECTAR_CONVERSION_RATIO;
-				nectar = 0f;
-			}
-			honey += amount * NECTAR_CONVERSION_RATIO;
-			nectar -= amount;
-		}
+                nectarToConvert = nectar;
+            }
+
+            nectar -= nectarToConvert;
+            honey += nectarToConvert * NECTAR_CONVERSION_RATIO;
+        }
 
 		public static bool ConsumeHoney(float amount)
 		{

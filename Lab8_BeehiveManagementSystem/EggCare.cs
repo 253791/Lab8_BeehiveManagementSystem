@@ -1,6 +1,6 @@
 ﻿namespace Lab8_BeehiveManagementSystem
 {
-	internal class EggCare : Bee
+	class EggCare : Bee
 	{
 		public const float CARE_PROGRESS_PER_SHIFT = 0.15f;
 		public override float CostPerShift { get { return 1.35f; } }
